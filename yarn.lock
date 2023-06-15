@@ -346,11 +346,6 @@ fill-range@^7.0.1:
   dependencies:
     to-regex-range "^5.0.1"
 
-flag-icons@^6.7.0:
-  version "6.7.0"
-  resolved "https://registry.yarnpkg.com/flag-icons/-/flag-icons-6.7.0.tgz#ce80897e21fda3f541e1f0471b295da7dfb940bb"
-  integrity sha512-+KXrrrXN2jiETFxisFl+3f83Bq7tj5nuIWnbv9fX59k05lvldEXRCOffybb5hAIjMWt4nmG0E8OfKt7Flm99Eg==
-
 follow-redirects@^1.15.0:
   version "1.15.2"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
