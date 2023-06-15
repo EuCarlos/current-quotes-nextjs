@@ -8,7 +8,7 @@ interface ICurrencyQuotes {
 }
 
 interface ICurrency {
-    code: string;
+    code: CountriesFlagProps;
     codein: string;
     name: string;
     high: string;
