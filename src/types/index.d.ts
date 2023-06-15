@@ -1,5 +1,5 @@
 interface ICurrencyQuotes {
-    code: string
+    code: CountriesFlagProps
     name: string
     high: string
     low: string
@@ -21,27 +21,27 @@ interface ICurrency {
     create_date: string;
 }
 
-enum CountriesFlag {
-    "USD" = "🇺🇸",
-    "USDT" = "🇺🇸",
-    "CAD" = "",
-    "GBP" = "",
-    "ARS" = "",
-    "BTC" = "",
-    "LTC" = "",
-    "EUR" = "",
-    "JPY" = "",
-    "CHF" = "",
-    "AUD" = "",
-    "CNY" = "",
-    "ILS" = "",
-    "ETH" = "",
-    "XRP" = "",
-    "DOGE" = "",
-    "BRA" = ""
+enum CountriesFlagEnum {
+    "USD" = "us",
+    "USDT" = "us",
+    "CAD" = "ca",
+    "GBP" = "gb",
+    "ARS" = "ar",
+    "BTC" = "coin",
+    "LTC" = "ltc",
+    "EUR" = "eur",
+    "JPY" = "jp",
+    "CHF" = "ch",
+    "AUD" = "au",
+    "CNY" = "cn",
+    "BRA" = "br",
+    "ILS" = "il",
+    "ETH" = "eth",
+    "XRP" = "coin",
+    "DOGE" = "coin"
 }
 
-type CountriesFlagProps = keyof typeof CountriesFlag;
+type CountriesFlagProps = keyof typeof CountriesFlagEnum;
 
 interface ICountryFlag {
     flag: CountriesFlagProps
