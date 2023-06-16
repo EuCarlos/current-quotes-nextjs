@@ -1,9 +1,16 @@
+import { useEffect, useState } from "react";
 import { CountryFlag } from "./CountryFlag";
 
 export function CurrencyQuotes({ code, name, high, low, pctChange }: ICurrencyQuotes) {
-    const porcentageToNumber = +pctChange;
-    const result = porcentageToNumber > 0 ? "green" : porcentageToNumber < 0 ? "red" : "gray";
-    const colorScheme = `bg-${result}-700 hover:bg-${result}-800 focus:ring-${result}-300 dark:bg-${result}-600 dark:hover:bg-${result}-700 dark:focus:ring-${result}-800`;  
+
+    const [colorScheme, setColorScheme] = useState<string>()
+    useEffect(() => {
+        const porcentageToNumber = +pctChange;
+        const result = porcentageToNumber > 0 ? "green" : porcentageToNumber < 0 ? "red" : "gray";
+        setColorScheme(`bg-${result}-700 hover:bg-${result}-800 focus:ring-${result}-300 dark:bg-${result}-600 dark:hover:bg-${result}-700 dark:focus:ring-${result}-800`);  
+    }, [])
+
+    console.log(colorScheme)
 
     return <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
         <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">

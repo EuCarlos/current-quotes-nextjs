@@ -8,9 +8,12 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
 
   return (
-    <main className={`${inter.className}`}>
+    <main className={`dark:bg-gray-900 ${inter.className}`}>
       <Header />
-      <CurrencyQuotesList />
+      <div className="container mx-auto my-4">
+        <h1 className="text-white text-2xl mb-2">Todas as moedas</h1>
+        <CurrencyQuotesList />
+      </div>
       <Footer />
     </main>
   )
